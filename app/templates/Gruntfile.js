@@ -1,4 +1,3 @@
-// Generated on 2013-09-24 using generator-webapp 0.0.0
 'use strict'; 
  
 module.exports = function (grunt) {

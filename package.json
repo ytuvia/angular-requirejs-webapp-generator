@@ -1,12 +1,12 @@
 {
-  "name": "generator-webapp",
+  "name": "generator-arWebapp",
   "version": "0.0.0",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/ytuvia/generator-webapp",
-  "bugs": "https://github.com/ytuvia/generator-webapp/issues",
+  "homepage": "https://github.com/ytuvia/generator-arwebapp",
+  "bugs": "https://github.com/ytuvia/generator-arwebapp/issues",
   "author": {
     "name": "Yehuda Tuvia",
     "email": "yehuda@wibiya.com",
@@ -15,7 +15,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ytuvia/generator-webapp.git"
+    "url": "git://github.com/ytuvia/generator-arwebapp.git"
   },
   "scripts": {
     "test": "mocha"

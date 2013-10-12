@@ -7,14 +7,14 @@ var s_ = require('underscore.string');
 var localUtils = require('../app/scripts/util.js');
 var assert  = require('better-assert');
 
-describe('webapp provider subgenerator', function () {
+describe('arWebapp provider subgenerator', function () {
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('webapp:app', [
+      this.app = helpers.createGenerator('arWebapp:app', [
         '../../app'
       ]);
       
@@ -32,7 +32,7 @@ describe('webapp provider subgenerator', function () {
     this.app.options['skip-install'] = true;
     
     this.app.run({}, function () {
-      var subgenerator = helpers.createGenerator('webapp:provider', [
+      var subgenerator = helpers.createGenerator('arWebapp:provider', [
         '../../provider'
       ],[testname]);
       subgenerator.run({}, function(){

@@ -4,7 +4,7 @@ var path = require('path');
 var yeoman = require('yeoman-generator');
 
 
-var WebappGenerator = module.exports = function WebappGenerator(args, options, config) {
+var arWebappGenerator = module.exports = function arWebappGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
@@ -14,9 +14,9 @@ var WebappGenerator = module.exports = function WebappGenerator(args, options, c
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
-util.inherits(WebappGenerator, yeoman.generators.Base);
+util.inherits(arWebappGenerator, yeoman.generators.Base);
 
-WebappGenerator.prototype.askFor = function askFor() {
+arWebappGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
@@ -34,7 +34,7 @@ WebappGenerator.prototype.askFor = function askFor() {
   }.bind(this));
 };
 
-WebappGenerator.prototype.app = function app() {
+arWebappGenerator.prototype.app = function app() {
   this.mkdir('app');
 
   this.mkdir('app/scripts');
@@ -71,12 +71,12 @@ WebappGenerator.prototype.app = function app() {
   this.copy('test/spec/controllers/_main.js', 'test/spec/controllers/main.js');
 };
 
-WebappGenerator.prototype.runtime = function runtime() {
+arWebappGenerator.prototype.runtime = function runtime() {
   this.copy('bowerrc', '.bowerrc');
   this.copy('gitignore','.gitignore');
 };
 
-WebappGenerator.prototype.projectfiles = function projectfiles() {
+arWebappGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
 };
